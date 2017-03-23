@@ -1,0 +1,24 @@
+<% include partials/header %>
+	<h1>Zoek naar een huis</h1>
+	<% if(errors){ %>
+		<ul>
+		<% errors.forEach(function(error){ %>
+			<li><%= error.msg %></li>
+		<% }) %>
+		</ul>
+	<% } %> 
+	<form method="POST" action="/residences/add">
+		<label>Naam</label><br>
+		<input type="text" name="name"><br>
+		<label>Plaatsnaam</label><br>
+		<input type="text" name="city"><br>
+
+		<button type="submit">Zoeken</button>
+	</form>
+	<h1><%= title %></h1>
+	<ul>
+		<% residences.forEach(function(residence){ %>
+			<li><%= residence.name %></li>
+		<% }) %>
+	</ul>
+<% include partials/footer %>
