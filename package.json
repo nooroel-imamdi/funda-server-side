@@ -1,0 +1,24 @@
+{
+  "name": "funda-server-side",
+  "version": "1.0.0",
+  "description": "funda app server side",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.5.6",
+    "express": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nooroel-imamdi/funda-server-side.git"
+  },
+  "author": "Nooroel Imamdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nooroel-imamdi/funda-server-side/issues"
+  },
+  "homepage": "https://github.com/nooroel-imamdi/funda-server-side#readme"
+}
