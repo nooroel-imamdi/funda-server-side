@@ -1,24 +1,18 @@
-<% include partials/header %>
-	<h1>Zoek naar een huis</h1>
-	<% if(errors){ %>
-		<ul>
-		<% errors.forEach(function(error){ %>
-			<li><%= error.msg %></li>
-		<% }) %>
-		</ul>
-	<% } %> 
-	<form method="POST" action="/residences/add">
-		<label>Naam</label><br>
-		<input type="text" name="name"><br>
-		<label>Plaatsnaam</label><br>
-		<input type="text" name="city"><br>
+<% include partials/head.ejs %>
 
-		<button type="submit">Zoeken</button>
-	</form>
-	<h1><%= title %></h1>
-	<ul>
-		<% residences.forEach(function(residence){ %>
-			<li><%= residence.name %></li>
-		<% }) %>
-	</ul>
-<% include partials/footer %>
+<section>
+	<h1>Huis in Amsterdam</h1>
+
+	<% for(var i = 0; i < residences.Objects.length; i++) {%>
+	<a href="/residences/<%= residences.Objects[i].Id%>">
+	  <article>
+	    <header>
+	    	<h1><%= residences.Objects[i].Adres %></h1>
+	    </header>
+			<img src="<%= residences.Objects[i].Foto %>" />
+	  </article>
+	</a>
+	<% } %>
+</section>
+
+<!-- <% include partials/footer.ejs %> -->
