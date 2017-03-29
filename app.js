@@ -3,6 +3,7 @@ var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser');
 var path = require('path');
+var ngrok = require('ngrok');
 
 require('dotenv').config()
 
@@ -45,6 +46,6 @@ app.get('/residences/:GroupByObjectType', function (req, res, GroupByObjectType)
   });
 })
 
-var server = app.listen(3000,function(){
-	console.log('Server Started on Port 3000');
+var server = app.listen(3004,function(){
+	console.log('Server Started on Port 3004');
 });
