@@ -4,7 +4,8 @@ var request = require('request');
 var bodyParser = require('body-parser');
 var path = require('path');
 var ngrok = require('ngrok');
-var compression = require('compression')
+var compression = require('compression');
+// var CleanCSS = require('clean-css');
 
 require('dotenv').config()
 
@@ -26,11 +27,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Set Static Path
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Global Vars
-// app.use(function(req, res, next){
-// 	res.locals.errors = null;
-// 	next();
-// })
+// Compression
+app.use(compression());
+
+// Clean CSS
+// new CleanCSS().minify(['./css/style.css']);
 
 app.get('/', function (req, res) {
   request(apiUrl + apiKey + searchKey, function (error, response, body) {
