@@ -4,11 +4,14 @@ var request = require('request');
 var bodyParser = require('body-parser');
 var path = require('path');
 
+require('dotenv').config()
+
 var app = express();
 
-var apiUrl = 'http://funda.kyrandia.nl/feeds/Aanbod.svc/json/';
-var apiKey = '271175433a7c4fe2a45750d385dd9bfd';
-var searchKey = '/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25';
+// .env
+var apiUrl = process.env.API_URL;
+var apiKey = process.env.API_KEY;
+var searchKey = process.env.SEARCH_KEY;
 
 // View Engine
 app.set('view engine', 'ejs');
