@@ -4,7 +4,7 @@ var request = require('request');
 var bodyParser = require('body-parser');
 var path = require('path');
 var ngrok = require('ngrok');
-var browserify = require('browserify');
+var compression = require('compression')
 
 require('dotenv').config()
 
