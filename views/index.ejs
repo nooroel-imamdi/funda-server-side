@@ -1,18 +1,16 @@
 <% include partials/head.ejs %>
 
-<section>
-	<h1>Huis in Amsterdam</h1>
+<section id="overview">
 
 	<% for(var i = 0; i < residences.Objects.length; i++) {%>
-	<a href="/residences/<%= residences.Objects[i].Id%>">
+	
 	  <article>
-	    <header>
-	    	<h1><%= residences.Objects[i].Adres %></h1>
-	    </header>
-			<img src="<%= residences.Objects[i].Foto %>" />
+			<img src="<%= residences.Objects[i].FotoLarge %>" />
+			<h1><a href="/residences/<%= residences.Objects[i].Id%>"><%= residences.Objects[i].Adres %></a></h1>
+			<p><%= residences.Objects[i].Postcode %> <%= residences.Objects[i].Woonplaats %></p>
+			<p><%- residences.Objects[i].PrijsGeformatteerdHtml %></p>
+			<p>Aantal kamer: <%= residences.Objects[i].AantalKamers %></p>
 	  </article>
-	</a>
 	<% } %>
-</section>
 
-<!-- <% include partials/footer.ejs %> -->
+</section>

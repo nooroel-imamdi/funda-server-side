@@ -1,10 +1,15 @@
 <% include partials/head.ejs %>
 
-<article>
-	<header>
-	<h1><%= residence.Objects.Adres %></h1>
-	</header>
-	
-	<img src="<%= residence.Objects.Foto %>" >
+<section id="detail">
 
-</article>
+	<article>
+		<img src="<%= residence.HoofdFoto %>" />
+		<h1><%= residence.Adres%></h1>
+		<p><%= residence.Postcode%> <%= residence.Plaats %></p>
+		<p><%= residence.objectType %></p>
+		<p><%- residence.PrijsGeformatteerd %></p>
+		<p>Ligging: <%= residence.Ligging %></p>
+		<p><%= residence.Makelaar %></p>
+	</article>
+	
+</section>

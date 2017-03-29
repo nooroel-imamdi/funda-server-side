@@ -6,8 +6,9 @@ var path = require('path');
 
 var app = express();
 
-
-
+var apiUrl = 'http://funda.kyrandia.nl/feeds/Aanbod.svc/json/';
+var apiKey = '271175433a7c4fe2a45750d385dd9bfd';
+var searchKey = '/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25';
 
 // View Engine
 app.set('view engine', 'ejs');
@@ -21,25 +22,25 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Global Vars
-app.use(function(req, res, next){
-	res.locals.errors = null;
-	next();
-})
+// app.use(function(req, res, next){
+// 	res.locals.errors = null;
+// 	next();
+// })
 
 app.get('/', function (req, res) {
-  request(host, function (error, response, body) {
+  request(apiUrl + apiKey + searchKey, function (error, response, body) {
     var data = JSON.parse(body)
     res.render('index.ejs', {residences: data})
   });
 })
 
-app.get('/residences/:id', function (req, res) {
-  request(host + req.params.id, function (error, response, body) {
+app.get('/residences/:GroupByObjectType', function (req, res, GroupByObjectType) {
+  request(apiUrl + 'detail/' + apiKey + '/koop/' + req.params.GroupByObjectType, function (error, response, body) {
+    console.log(GroupByObjectType);
     var data = JSON.parse(body)
     res.render('detail.ejs', {residence: data})
   });
 })
-
 
 var server = app.listen(3000,function(){
 	console.log('Server Started on Port 3000');
