@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "expose": "ngrok http 3004",
-    "build": "browserify"
+    "expose": "ngrok http 3004"
   },
   "dependencies": {
     "body-parser": "*",

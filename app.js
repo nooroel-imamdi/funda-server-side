@@ -24,13 +24,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Set Static Path
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Global Vars
-// app.use(function(req, res, next){
-// 	res.locals.errors = null;
-// 	next();
-// })
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './')));
 
 app.get('/', function (req, res) {
   request(apiUrl + apiKey + searchKey, function (error, response, body) {
