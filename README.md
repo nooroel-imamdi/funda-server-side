@@ -11,7 +11,7 @@ Er zijn verschillende branches aangemaakt om bepaalde werkzaamheden duidelijk ge
 - Service Worker: https://github.com/nooroel-imamdi/funda-server-side/tree/serviceworker
 
 ## Installatie
-- Installeer ''dependencies `npm install`
+- Installeer dependencies `npm install`
 - Serve: `nodemon`
 - Expose: `npm run expose`
 
