@@ -13,5 +13,5 @@ Er zijn verschillende branches aangemaakt om bepaalde werkzaamheden duidelijk ge
 ## Installatie
 - Installeer ''dependencies `npm install`
 - Serve: `nodemon`
-- Expose: npm run expose
+- Expose: `npm run expose`
 
