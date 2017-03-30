@@ -28,7 +28,7 @@ nav{
 	align-items: center;
 }
 nav a{
-	background: url(/img/fundawonen-logo.svg) no-repeat;
+	background: url(../img/fundawonen-logo.svg) no-repeat;
 	background-size: 100%;
 	width: 6em;
     height: 2.1em;

@@ -17,20 +17,14 @@ var searchKey = process.env.SEARCH_KEY;
 
 // View Engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/src/views'));
 
 // Body Parser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Set Static Path
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Global Vars
-// app.use(function(req, res, next){
-// 	res.locals.errors = null;
-// 	next();
-// })
+app.use(express.static(path.join(__dirname, './src')));
 
 app.get('/', function (req, res) {
   request(apiUrl + apiKey + searchKey, function (error, response, body) {
@@ -47,6 +41,6 @@ app.get('/residences/:GroupByObjectType', function (req, res, GroupByObjectType)
   });
 })
 
-var server = app.listen(3004,function(){
-	console.log('Server Started on Port 3004');
+var server = app.listen(3001,function(){
+	console.log('Server Started on Port 3001');
 });
