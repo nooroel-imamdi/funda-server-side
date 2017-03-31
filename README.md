@@ -29,3 +29,8 @@ Voer in de terminal (binnen hetzelfde mapje van het project) de volgende regel i
 Bundle.js wordt met deze commandline aangemaakt of geupdate.
 
 
+### Stap 4
+Voeg het volgende script toe in de HTML, net boven de afsluittag `</body>`
+
+`<script src="[url naar de bundle.js]"></script>`
+
