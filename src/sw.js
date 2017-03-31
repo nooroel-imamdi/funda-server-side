@@ -1,7 +1,7 @@
 var cacheName = 'v1';
 var cacheFiles = [
 	'./',
-	'./static/css/style.css',
+	'/static/css/style.css',
 	'https://fonts.googleapis.com/css?family=Amiko'	
 ];
 
