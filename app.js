@@ -5,10 +5,12 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var ngrok = require('ngrok');
 var browserify = require('browserify');
+var httpsRedirect = require('express-https-redirect');
 
 require('dotenv').config()
 
 var app = express();
+app.use('/', httpsRedirect())
 
 // .env
 var apiUrl = process.env.API_URL;
