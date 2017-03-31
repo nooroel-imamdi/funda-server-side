@@ -7,6 +7,8 @@ Met behulp van Browserify kunnen meerdere bestanden samengevoegd worden tot éé
 
 Installeren `npm install -g browserify`
 
+`var browserify = require('browserify');`
+
 ## Bestanden bundelen
 
 ### Stap 1
