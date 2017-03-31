@@ -5,7 +5,7 @@
 	<% for(var i = 0; i < residences.Objects.length; i++) {%>
 	
 	  <article>
-			<img src="<%= residences.Objects[i].FotoLarge %>" />
+			<img src="<%= residences.Objects[i].FotoLarge %>" alt="" />
 			<h1><a href="/residences/<%= residences.Objects[i].Id%>"><%= residences.Objects[i].Adres %></a></h1>
 			<p><%= residences.Objects[i].Postcode %> <%= residences.Objects[i].Woonplaats %></p>
 			<p><%- residences.Objects[i].PrijsGeformatteerdHtml %></p>
