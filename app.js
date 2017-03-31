@@ -41,6 +41,6 @@ app.get('/residences/:GroupByObjectType', function (req, res, GroupByObjectType)
   });
 })
 
-var server = app.listen(3001,function(){
-	console.log('Server Started on Port 3001');
+var server = app.listen(3004,function(){
+	console.log('Server Started on Port 3004');
 });
